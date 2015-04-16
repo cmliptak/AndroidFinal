@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AndroidFinal</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_create_user">CreateUser</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_forgot">Forgot</string>
+    <string name="apply">Apply</string>
+    <string name="forgot">Forgot</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+</resources>
