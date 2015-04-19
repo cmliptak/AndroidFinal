@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.adam.christina.androidfinal.CreateAcct">
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fNameEdit"
+            android:layout_marginTop="44dp"
+            android:hint="@string/fName"
+            android:minWidth="250dp"
+            android:minHeight="40dp"
+            android:nestedScrollingEnabled="false"
+            android:inputType="textCapWords|text"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lNameEdit"
+            android:layout_marginTop="35dp"
+            android:inputType="textCapCharacters|text"
+            android:hint="@string/lName"
+            android:minWidth="250dp"
+            android:minHeight="40dp"
+            android:layout_below="@+id/fNameEdit"
+            android:layout_alignLeft="@+id/fNameEdit"
+            android:layout_alignStart="@+id/fNameEdit" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/semesterCreate"
+            android:minWidth="250dp"
+            android:minHeight="40dp"
+            android:hint="@string/semester"
+            android:inputType="text"
+            android:layout_above="@+id/button4"
+            android:layout_alignLeft="@+id/address"
+            android:layout_alignStart="@+id/address"
+            android:layout_marginBottom="109dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/demoEdit"
+            android:hint="@string/year"
+            android:minWidth="250dp"
+            android:minHeight="40dp"
+            android:layout_above="@+id/button4"
+            android:layout_alignLeft="@+id/semesterCreate"
+            android:layout_alignStart="@+id/semesterCreate"
+            android:layout_marginBottom="37dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress"
+            android:ems="10"
+            android:id="@+id/address"
+            android:hint="@string/address"
+            android:minWidth="250dp"
+            android:minHeight="40dp"
+            android:layout_above="@+id/semesterCreate"
+            android:layout_alignLeft="@+id/lNameEdit"
+            android:layout_alignStart="@+id/lNameEdit"
+            android:layout_marginBottom="38dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/createBtn"
+            android:id="@+id/button4"
+            android:layout_marginBottom="32dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="newMemberLog"/>
+
+</RelativeLayout>

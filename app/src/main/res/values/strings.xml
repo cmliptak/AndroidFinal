@@ -1,14 +1,80 @@
 <resources>
     <string name="app_name">AndroidFinal</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_create_user">CreateUser</string>
-    <string name="title_activity_home">Home</string>
-    <string name="title_activity_forgot">Forgot</string>
-    <string name="apply">Apply</string>
-    <string name="forgot">Forgot</string>
-    <string name="login">Login</string>
-    <string name="username">Username</string>
-    <string name="password">Password</string>
+        <string name="hello_world">Hello world!</string>
+        <string name="action_settings">Settings</string>
+        <string name="username">Username</string>
+        <string name="password">Password</string>
+        <string name="login">Login</string>
+        <string name="apply">Apply</string>
+        <string name="forgot">Forgot</string>
+        <string name="title_activity_menu_screen">MenuScreen</string>
+        <string name="title_activity_gpa_screen">GpaScreen</string>
+        <string name="curGpa">Current GPA</string>
+        <string name="semester1">Semester 1 GPA</string>
+        <string name="semester2">Semester 2 GPA</string>
+        <string name="semester3">Semester 3 GPA</string>
+        <string name="studentInfo">STUDENT INFORMATION</string>
+        <string name="title_activity_book_store">BookStore</string>
+        <!--Create Account-->
+        <string name="title_activity_create_acct">CreateAcct</string>
+        <string name="fName">First Name</string>
+        <string name="lName">Last Name</string>
+        <string name="address">Address</string>
+        <string name="semester">Semester</string>
+        <string name="year">Demographic</string>
+        <string name="createBtn">Create Account</string>
+        <!--GPA Calculator-->
+        <string name="title_activity_gpa_calc">GpaCalc</string>
+        <string name="gpaCalcLabel">Calculate Current GPA</string>
+        <string name="creditHrs">Credit Hours</string>
+        <string name="grade">Grade</string>
+        <string name="class1">Class 1</string>
+        <string name="class2">Class 2</string>
+        <string name="class3">Class 3</string>
+        <string name="class4">Class 4</string>
+        <string name="class5">Class 5</string>
+        <string name="class6">Class 6</string>
+        <string name="class7">Class 7</string>
+        <string name="totalGpa">Total GPA</string>
+        <string name="calcGpa">Calculate</string>
+        <!--Tuition Calculation-->
+        <string name="title_activity_tuition_calc">TuitionCalc</string>
+        <string name="numClass">Number of Classes</string>
+        <string name="tuitionCost">Tuition Cost</string>
+        <string name="instateDiscount">Instate Discount</string>
+        <string name="estBooks">Books Estimation</string>
+        <string name="tuitionCalc">Estimate Semester Cost</string>
+        <string name="grant">Grants</string>
+        <string name="finanAid">Financial Aid</string>
+        <string name="instateRes">Instate Resident</string>
+        <string name="estTotal">Estimated Total</string>
+        <string name="calcTuitionBtn">Calculate</string>
+        <!--ScheduleScreen-->
+        <string name="title_activity_schedule_screen">ScheduleScreen</string>
+        <string name="scheduleTitle">Schedule</string>
+        <string name="currentSemester">Current Semester</string>
+        <string name="class1Info">Class 1 Information; Time, Location, Professor</string>
+        <string name="class2Info">Class 2 Information; Time, Location, Professor</string>
+        <string name="class3Info">Class 3 Information; Time, Location, Professor</string>
+        <string name="class4Info">Class 4 Information; Time, Location, Professor</string>
+        <string name="class5Info">Class 5 Information; Time, Location, Professor</string>
+        <string name="class6Info">Class 6 Information; Time, Location, Professor</string>
+        <string name="class7Info">Class 7 Information; Time, Location, Professor</string>
+        <string name="class8Info">Class 8 Information; Time, Location, Professor</string>
+
+        <string name="user">User</string>
+        <string name="pass">Password</string>
+        <string name="confirmPass">Confirm</string>
+        <string name="backBtn">Back</string>
+        <string name="nextBtn">Next</string>
+        <string name="scheduleBtn">Schedule</string>
+        <string name="tuitionBtn">Tuition</string>
+        <string name="gpaScreenBtn">GPA</string>
+        <string name="bookBtn">Book</string>
+
+        <string name="title_activity_home">Home</string>
+        <string name="title_activity_forgot">Forgot</string>
+        <string name="title_activity_create_user">Create User</string>
+
 </resources>

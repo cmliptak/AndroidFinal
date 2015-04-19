@@ -28,6 +28,26 @@
             android:name=".Forgot"
             android:label="@string/title_activity_forgot" >
         </activity>
+        <activity
+            android:name=".CreateAcct"
+            android:label="@string/title_activity_create_acct" >
+        </activity>
+        <activity
+            android:name=".ScheduleScreen"
+            android:label="@string/title_activity_schedule_screen" >
+        </activity>
+        <activity
+            android:name=".TuitionCalc"
+            android:label="@string/title_activity_tuition_calc" >
+        </activity>
+        <activity
+            android:name=".GpaScreen"
+            android:label="@string/title_activity_gpa_screen" >
+        </activity>
+        <activity
+            android:name=".BookStore"
+            android:label="@string/title_activity_book_store" >
+        </activity>
     </application>
 
 </manifest>

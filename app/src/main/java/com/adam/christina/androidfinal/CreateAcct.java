@@ -8,19 +8,19 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class Home extends ActionBarActivity {
+public class CreateAcct extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_create_acct);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_home, menu);
+        getMenuInflater().inflate(R.menu.menu_create_acct, menu);
         return true;
     }
 
@@ -39,25 +39,8 @@ public class Home extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void goToSchedule(View view){
-        Intent scheduleBtn = new Intent(this, ScheduleScreen.class );
-        startActivity(scheduleBtn);
-
-    }
-
-    public void goToTuition(View view){
-        Intent tuitionBtn = new Intent(this, TuitionCalc.class);
-        startActivity(tuitionBtn);
-    }
-
-    public void goToGpa(View view){
-        Intent gpaScreenBtn = new Intent(this, GpaScreen.class );
-        startActivity(gpaScreenBtn);
-
-    }
-
-    public void goToBookstore(View view){
-        Intent bookBtn = new Intent(this, BookStore.class);
-        startActivity(bookBtn);
+    public void newMemberLog(View view){
+        Intent button4 = new Intent(this, MainActivity.class);
+        startActivity(button4);
     }
 }
