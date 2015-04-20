@@ -16,7 +16,7 @@ import com.adam.christina.androidfinal.R;
 public class User extends Activity{
 
     private int userId;
-    private String password;
+    private String userPass;
     private String firstName;
     private String lastName;
     private String address;
@@ -32,5 +32,65 @@ public class User extends Activity{
     public User(String title, String author) {
         super();
 
+    }
+
+    //Setters
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public void setUserPass(String password) {
+        this.userPass = password;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setDemog(String demog) {
+        this.demog = demog;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setSemester(String semester) {
+        this.semester = semester;
+    }
+
+
+    //Getters
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public String getUserPass() {
+        return userPass;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getSemester() {
+        return semester;
+    }
+
+    public String getDemog() {
+        return demog;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 }

@@ -5,12 +5,15 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Created by Christina on 4/19/2015.
  */
-public class UserDatabase {//extends SQLiteOpenHelper {
+public class UserDatabase extends SQLiteOpenHelper {
 
-   /* private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 1;
     private static final String DBNAME = "UserAcctDB";
     //Table Fields
     private static final String USERFIRST = "first";
@@ -43,7 +46,7 @@ public class UserDatabase {//extends SQLiteOpenHelper {
         // create User table
         db.execSQL(CREATE_USER_TABLE);
 
-        /*Create Student Table if none
+    /*Create Student Table if none
         String CREATE_STUDENT_TABLE = "CREATE TABLE STUDENT "
                 + TABLE_STUDENT + "(" + USERID     + "String Primary ID,"
 
@@ -52,16 +55,16 @@ public class UserDatabase {//extends SQLiteOpenHelper {
 
         // create student table
         db.execSQL(CREATE_STUDENT_TABLE);
-
+    */
     }//end onCreate
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         //upgrades the tables if new version exists
-    }*/
+    }
 
 
-    /*Constructor
+    //Constructor
     public UserDatabase(Context context) {
         super(context, DBNAME, null, DATABASE_VERSION);
     }
@@ -76,10 +79,10 @@ public class UserDatabase {//extends SQLiteOpenHelper {
 
         // 2. create ContentValues
         ContentValues values = new ContentValues();
-        values.put(USERID, person.getId());
+        values.put(USERID, person.getUserId());
         values.put(USERPASS, person.getUserPass());
-        values.put(USERFIRST, person.getFname());
-        values.put(USERLAST, person.getLname());
+        values.put(USERFIRST, person.getFirstName());
+        values.put(USERLAST, person.getLastName());
         values.put(USERADDRESS, person.getAddress());
         values.put(USERDEMO, person.getDemog());
         values.put(SEMESTER, person.getSemester());
@@ -114,10 +117,10 @@ public class UserDatabase {//extends SQLiteOpenHelper {
 
         // 4. build user object
         User person = new User();
-        person.setId(Integer.parseInt(cursor.getString(0)));
-        person.setPassword(cursor.getString(1));
-        person.setFname(cursor.getString(2));
-        person.setLname(cursor.getString(3));
+        person.setUserId(Integer.parseInt(cursor.getString(0)));
+        person.setUserPass(cursor.getString(1));
+        person.setFirstName(cursor.getString(2));
+        person.setLastName(cursor.getString(3));
         person.setAddress(cursor.getString(4));
         person.setSemester(cursor.getString(5));
         person.setDemog(cursor.getString(6));
@@ -144,10 +147,10 @@ public class UserDatabase {//extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             do {
                 person = new User();
-                person.setId(Integer.parseInt(cursor.getString(0)));
-                person.setPassword(cursor.getString(1));
-                person.setFname(cursor.getString(2));
-                person.setLname(cursor.getString(3));
+                person.setUserId(Integer.parseInt(cursor.getString(0)));
+                person.setUserPass(cursor.getString(1));
+                person.setFirstName(cursor.getString(2));
+                person.setLastName(cursor.getString(3));
                 person.setAddress(cursor.getString(4));
                 person.setSemester(cursor.getString(5));
                 person.setDemog(cursor.getString(6));
@@ -172,10 +175,10 @@ public class UserDatabase {//extends SQLiteOpenHelper {
 
         // 2. create ContentValues
         ContentValues values = new ContentValues();
-        values.put("id", person.getId());
+        values.put("id", person.getUserId());
         values.put("pass", person.getUserPass());
-        values.put("first", person.getFname());
-        values.put("last", person.getLname());
+        values.put("first", person.getFirstName());
+        values.put("last", person.getLastName());
         values.put("address", person.getAddress());
         values.put("demo", person.getDemog());
         values.put("semester", person.getSemester());
@@ -193,7 +196,7 @@ public class UserDatabase {//extends SQLiteOpenHelper {
 
     }
 
-    /* Deleting single person
+     //Deleting single person
     public void deletePerson(User person) {
 
         // 1. get reference to writable DB
@@ -202,12 +205,12 @@ public class UserDatabase {//extends SQLiteOpenHelper {
         // 2. delete
         db.delete(TABLE_USER,
                 USERID+" = ?",
-                new String[] { String.valueOf(person.getId()) });
+                new String[] { String.valueOf(person.getUserId()) });
 
         // 3. close
         db.close();
 
         Log.d("deletePerson", person.toString());
 
-    }*/
+    }
 }
