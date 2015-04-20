@@ -1,11 +1,14 @@
 package com.adam.christina.androidfinal;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -47,8 +50,31 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void loginScreen(View view){
-        Intent loginBtn = new Intent(this, Home.class);
-        startActivity(loginBtn);
+        TextView temp = (TextView) findViewById(R.id.userName);
+        String userName = (String)temp.getText().toString();
+
+        temp = (TextView) findViewById(R.id.passWord);
+        String password = (String)temp.getText().toString();
+
+
+        boolean salmon = true;
+
+        if  (salmon == true) {
+
+            Intent loginBtn = new Intent(this, Home.class);
+            startActivity(loginBtn);
+        }
+
+        else {
+            Context context = getApplicationContext();
+            CharSequence text = "Wrong user name or password entered";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        }
+
+
     }
 
     public void forgotInfo(View view){

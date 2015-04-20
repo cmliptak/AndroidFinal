@@ -23,7 +23,7 @@
         <string name="address">Address</string>
         <string name="semester">Semester</string>
         <string name="year">Demographic</string>
-        <string name="createBtn">Create Account</string>
+        <string name="createBtn">Create</string>
         <!--GPA Calculator-->
         <string name="title_activity_gpa_calc">GpaCalc</string>
         <string name="gpaCalcLabel">Calculate Current GPA</string>
@@ -72,7 +72,8 @@
         <string name="tuitionBtn">Tuition</string>
         <string name="gpaScreenBtn">GPA</string>
         <string name="bookBtn">Book</string>
-
+        <string name="emailBtn">Send Email</string>
+        <string name="email">Forgot Password? Enter your Email.</string>
         <string name="title_activity_home">Home</string>
         <string name="title_activity_forgot">Forgot</string>
         <string name="title_activity_create_user">Create User</string>

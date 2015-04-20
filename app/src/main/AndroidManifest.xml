@@ -29,10 +29,6 @@
             android:label="@string/title_activity_forgot" >
         </activity>
         <activity
-            android:name=".CreateAcct"
-            android:label="@string/title_activity_create_acct" >
-        </activity>
-        <activity
             android:name=".ScheduleScreen"
             android:label="@string/title_activity_schedule_screen" >
         </activity>

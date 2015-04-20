@@ -1,11 +1,13 @@
 package com.adam.christina.androidfinal;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 
 public class CreateUser extends ActionBarActivity {
@@ -40,13 +42,23 @@ public class CreateUser extends ActionBarActivity {
     }
 
 
+    public void newMemberLog(View view){
+
+        Context context = getApplicationContext();
+        CharSequence text = "Account created please log in";
+        int duration = Toast.LENGTH_LONG;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+
+        Intent button4 = new Intent(this, MainActivity.class);
+        startActivity(button4);
+    }
+
     public void backBtn(View view){
         Intent backBtn = new Intent(this, MainActivity.class);
         startActivity(backBtn);
     }
-    public void nextCreate(View view) {
-        Intent nextBtn = new Intent(this, CreateAcct.class);
-        startActivity(nextBtn);
 
-    }
+
 }

@@ -1,19 +1,30 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+
     tools:context="com.adam.christina.androidfinal.CreateUser">
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="1"
+        android:orientation="vertical"
+        android:layout_marginLeft="25px"
+        >
+
+
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/user"
+            android:layout_marginTop="44dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="127dp"
-            android:hint="@string/user" />
+
+            android:hint="@string/user"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:minWidth="300dp" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -21,38 +32,132 @@
             android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/pass"
+            android:layout_marginTop="44dp"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:hint="@string/pass" />
+            android:hint="@string/pass"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:minWidth="300dp" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
+            android:layout_marginTop="44dp"
             android:ems="10"
             android:id="@+id/confirmPass"
             android:layout_below="@+id/pass"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="55dp"
-            android:hint="@string/confirmPass" />
+
+            android:hint="@string/confirmPass"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:minWidth="300dp" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fNameEdit"
+            android:layout_marginTop="44dp"
+            android:hint="@string/fName"
+            android:minWidth="300dp"
+            android:minHeight="40dp"
+            android:nestedScrollingEnabled="false"
+            android:inputType="textCapWords|text"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_row="3"
+            android:layout_column="0" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lNameEdit"
+            android:layout_marginTop="44dp"
+            android:inputType="textCapCharacters|text"
+            android:hint="@string/lName"
+            android:minWidth="300dp"
+            android:minHeight="40dp"
+            android:layout_below="@+id/fNameEdit"
+            android:layout_alignLeft="@+id/fNameEdit"
+            android:layout_alignStart="@+id/fNameEdit"
+            android:layout_row="4"
+            android:layout_column="0" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/semesterCreate"
+            android:minWidth="300dp"
+            android:minHeight="40dp"
+            android:layout_marginTop="44dp"
+            android:hint="@string/semester"
+            android:inputType="text"
+            android:layout_above="@+id/button4"
+            android:layout_alignLeft="@+id/address"
+            android:layout_alignStart="@+id/address"
+            android:layout_row="5"
+            android:layout_column="0" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/demoEdit"
+            android:hint="@string/year"
+            android:minWidth="300dp"
+            android:minHeight="40dp"
+            android:layout_marginTop="44dp"
+            android:layout_above="@+id/button4"
+            android:layout_alignLeft="@+id/semesterCreate"
+            android:layout_alignStart="@+id/semesterCreate"
+            android:layout_row="6"
+            android:layout_column="0" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress"
+            android:ems="10"
+            android:id="@+id/address"
+            android:hint="@string/address"
+            android:minWidth="300dp"
+            android:minHeight="40dp"
+            android:layout_marginTop="44dp"
+            android:layout_above="@+id/semesterCreate"
+            android:layout_alignLeft="@+id/lNameEdit"
+            android:layout_alignStart="@+id/lNameEdit"
+            android:layout_row="7"
+            android:layout_column="0" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/nextBtn"
-            android:id="@+id/nextBtn"
-            android:onClick="nextCreate"
+            android:text="@string/createBtn"
+            android:id="@+id/button4"
+            android:layout_marginTop="44dp"
             android:layout_alignParentBottom="true"
-            android:layout_alignRight="@+id/confirmPass"
-            android:layout_alignEnd="@+id/confirmPass" />
+            android:layout_centerHorizontal="true"
+            android:onClick="newMemberLog"
+            android:layout_row="8"
+            android:layout_column="0" />
+
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/backBtn"
+            android:layout_marginTop="44dp"
+            android:layout_marginBottom="44dp"
+
             android:id="@+id/backBtn"
             android:onClick="backBtn"
             android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/confirmPass" />
+            android:layout_alignStart="@+id/confirmPass"
+            android:layout_row="8"
+            android:layout_column="0"
+            android:layout_marginLeft="200dp"
+            />
 
-</RelativeLayout>
+
+    </GridLayout>
+</ScrollView>

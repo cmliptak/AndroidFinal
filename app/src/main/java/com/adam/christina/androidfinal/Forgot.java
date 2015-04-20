@@ -1,9 +1,13 @@
 package com.adam.christina.androidfinal;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 
 public class Forgot extends ActionBarActivity {
@@ -35,5 +39,26 @@ public class Forgot extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void sendEmail(View view){
+
+        Context context = getApplicationContext();
+        CharSequence text = "An email May or may not have been sent containing your password";
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+
+
+        Intent button = new Intent(this, MainActivity.class);
+        startActivity(button);
+
+
+    }
+
+    public void backToMain (View view){
+        Intent button2 = new Intent(this, MainActivity.class);
+        startActivity(button2);
     }
 }
