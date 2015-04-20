@@ -76,7 +76,7 @@ public class UserDatabase {//extends SQLiteOpenHelper {
 
         // 2. create ContentValues
         ContentValues values = new ContentValues();
-        values.put(USERID, person.getId()); 
+        values.put(USERID, person.getId());
         values.put(USERPASS, person.getUserPass());
         values.put(USERFIRST, person.getFname());
         values.put(USERLAST, person.getLname());

@@ -23,12 +23,12 @@
             android:layout_height="wrap_content"
             android:text="@string/scheduleBtn"
             android:id="@+id/scheduleBtn"
-            android:minWidth="170dp"
+            android:minWidth="160dp"
             android:maxWidth="40dp"
             android:minHeight="95dp"
             android:maxHeight="95dp"
             android:layout_below="@+id/dividerHome1"
-            android:layout_alignParentLeft="true"
+
             android:layout_alignParentStart="true"
             android:layout_marginTop="10dp"
             android:onClick="goToSchedule"/>
@@ -46,12 +46,12 @@
             android:layout_height="wrap_content"
             android:text="@string/tuitionBtn"
             android:id="@+id/tuitionBtn"
-            android:minWidth="170dp"
+            android:minWidth="160dp"
             android:maxWidth="40dp"
             android:minHeight="95dp"
             android:maxHeight="95dp"
             android:layout_alignTop="@+id/scheduleBtn"
-            android:layout_alignParentRight="true"
+
             android:layout_alignParentEnd="true"
             android:onClick="goToTuition"/>
 
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:text="@string/gpaScreenBtn"
             android:id="@+id/gpaScreenBtn"
-            android:minWidth="170dp"
+            android:minWidth="160dp"
             android:maxWidth="40dp"
             android:minHeight="95dp"
             android:maxHeight="95dp"
@@ -89,7 +89,7 @@
             android:layout_height="wrap_content"
             android:text="@string/bookBtn"
             android:id="@+id/bookBtn"
-            android:minWidth="170dp"
+            android:minWidth="160dp"
             android:maxWidth="40dp"
             android:minHeight="95dp"
             android:maxHeight="95dp"

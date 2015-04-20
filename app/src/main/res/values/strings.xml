@@ -79,4 +79,11 @@
         <string name="title_activity_forgot">Forgot</string>
         <string name="title_activity_create_user">Create User</string>
 
+    <!--book store resorces-->
+    <string name="amazon">Search Amazon</string>
+    <string name="chegg">Search Chegg</string>
+    <string name="barnsAndNoble">Search Barns &amp; Noble</string>
+    <string name="search"> search</string>
+    <string name="title">Search for a book</string>
+
 </resources>

@@ -7,11 +7,22 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
 public class CreateUser extends ActionBarActivity {
 
+
+    // declare fields
+    private   String userName ;
+    private  String password1 ;
+    private String password2 ;
+    private  String fName ;
+    private  String lName ;
+    private String semester ;
+    private  String demograph ;
+    private String address ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +56,7 @@ public class CreateUser extends ActionBarActivity {
     public void newMemberLog(View view){
 
         Context context = getApplicationContext();
-        CharSequence text = "Account created please log in";
+        CharSequence text = "Account created. Please log in";
         int duration = Toast.LENGTH_LONG;
 
         Toast toast = Toast.makeText(context, text, duration);
@@ -60,5 +71,36 @@ public class CreateUser extends ActionBarActivity {
         startActivity(backBtn);
     }
 
+    public void writeToDB(){
 
+
+    }
+
+    public void pullInfo ()  {
+
+        TextView temp = (TextView) findViewById(R.id.user);
+        this.userName = (String)temp.getText().toString();
+
+        temp = (TextView) findViewById(R.id.pass);
+        this.password1 = (String)temp.getText().toString();
+
+        temp = (TextView) findViewById(R.id.confirmPass);
+        this.password2 = (String)temp.getText().toString();
+
+        temp = (TextView) findViewById(R.id.fNameEdit);
+        this.fName = (String)temp.getText().toString();
+
+        temp = (TextView) findViewById(R.id.lNameEdit);
+        this.lName = (String)temp.getText().toString();
+
+        temp = (TextView) findViewById(R.id.semesterCreate);
+        this.semester = (String)temp.getText().toString();
+
+        temp = (TextView) findViewById(R.id.demoEdit);
+        this.demograph = (String)temp.getText().toString();
+
+        temp = (TextView) findViewById(R.id.address);
+        this.address = (String)temp.getText().toString();
+
+    }
 }
