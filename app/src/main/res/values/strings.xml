@@ -24,6 +24,7 @@
         <string name="semester">Semester</string>
         <string name="year">Demographic</string>
         <string name="createBtn">Create</string>
+        <string name="example">Example</string>
         <!--GPA Calculator-->
         <string name="title_activity_gpa_calc">GpaCalc</string>
         <string name="gpaCalcLabel">Calculate Current GPA</string>

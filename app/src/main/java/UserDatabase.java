@@ -74,15 +74,15 @@ public class UserDatabase {//extends SQLiteOpenHelper {
         // 1. get reference to writable DB
         SQLiteDatabase db = this.getWritableDatabase();
 
-        // 2. create ContentValues to add key "column"/value
+        // 2. create ContentValues
         ContentValues values = new ContentValues();
-        values.put(USERID, person.getId()); // get id
-        values.put(USERPASS, person.getUserPass());//get password
-        values.put(USERFIRST, person.getFname()); // get First name
-        values.put(USERLAST, person.getLname()); // get Last name
-        values.put(USERADDRESS, person.getAddress()); //get address
-        values.put(USERDEMO, person.getDemog()); //get demographic
-        values.put(SEMESTER, person.getSemester()); //get Semester
+        values.put(USERID, person.getId()); 
+        values.put(USERPASS, person.getUserPass());
+        values.put(USERFIRST, person.getFname());
+        values.put(USERLAST, person.getLname());
+        values.put(USERADDRESS, person.getAddress());
+        values.put(USERDEMO, person.getDemog());
+        values.put(SEMESTER, person.getSemester());
 
         // 3. insert
         db.insert(TABLE_USER, // table
@@ -124,11 +124,11 @@ public class UserDatabase {//extends SQLiteOpenHelper {
 
         Log.d("getUser("+id+")", person.toString());
 
-        // 5. return book
+        // 5. return person
         return person;
     }
 
-    // Get All Books
+    // Get All People
     public List<User> getAllPeople() {
         List<User> people = new LinkedList<User>();
 
@@ -153,14 +153,14 @@ public class UserDatabase {//extends SQLiteOpenHelper {
                 person.setDemog(cursor.getString(6));
 
 
-                // Add book to books
+                // Add person to people
                 people.add(person);
             } while (cursor.moveToNext());
         }
 
         Log.d("getAllPeople()", people.toString());
 
-        // return books
+        // return people
         return people;
     }
 
@@ -170,15 +170,15 @@ public class UserDatabase {//extends SQLiteOpenHelper {
         // 1. get reference to writable DB
         SQLiteDatabase db = this.getWritableDatabase();
 
-        // 2. create ContentValues to add key "column"/value
+        // 2. create ContentValues
         ContentValues values = new ContentValues();
-        values.put("id", person.getId()); // get User ID
-        values.put("pass", person.getUserPass());//get password
-        values.put("first", person.getFname()); // get First name
-        values.put("last", person.getLname()); //get Last name
-        values.put("address", person.getAddress()); //getAddress
-        values.put("demo", person.getDemog()); //get demo
-        values.put("semester", person.getSemester());//getsemester
+        values.put("id", person.getId());
+        values.put("pass", person.getUserPass());
+        values.put("first", person.getFname());
+        values.put("last", person.getLname());
+        values.put("address", person.getAddress());
+        values.put("demo", person.getDemog());
+        values.put("semester", person.getSemester());
 
         // 3. updating row
         int i = db.update(TABLE_USER, //table
@@ -193,21 +193,21 @@ public class UserDatabase {//extends SQLiteOpenHelper {
 
     }
 
-    /* Deleting single book
-    public void deleteBook(Book book) {
+    /* Deleting single person
+    public void deletePerson(User person) {
 
         // 1. get reference to writable DB
         SQLiteDatabase db = this.getWritableDatabase();
 
         // 2. delete
-        db.delete(TABLE_BOOKS,
-                KEY_ID+" = ?",
-                new String[] { String.valueOf(book.getId()) });
+        db.delete(TABLE_USER,
+                USERID+" = ?",
+                new String[] { String.valueOf(person.getId()) });
 
         // 3. close
         db.close();
 
-        Log.d("deleteBook", book.toString());
+        Log.d("deletePerson", person.toString());
 
     }*/
 }
