@@ -23,6 +23,9 @@ public class CreateUser extends ActionBarActivity {
     private String semester ;
     private  String demograph ;
     private String address ;
+    private TextView temp;
+    User thisUser = new User();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,10 +79,31 @@ public class CreateUser extends ActionBarActivity {
 
     }
 
+    /*private int userId;
+    private String userPass;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String demog;
+    private String semester;*/
+
     public void pullInfo ()  {
 
-        TextView temp = (TextView) findViewById(R.id.user);
+       setUser();
+       setPassword();
+       setName();
+       setStudentInfo();
+       setAdd();
+
+    }
+
+    public void setUser(){
+        temp = (TextView) findViewById(R.id.user);
         this.userName = (String)temp.getText().toString();
+        thisUser.setUserId(this.userName);
+    }
+
+    public void setPassword(){
 
         temp = (TextView) findViewById(R.id.pass);
         this.password1 = (String)temp.getText().toString();
@@ -87,20 +111,44 @@ public class CreateUser extends ActionBarActivity {
         temp = (TextView) findViewById(R.id.confirmPass);
         this.password2 = (String)temp.getText().toString();
 
+        if(this.password1.equals(this.password2))
+        {
+            thisUser.setUserPass(this.password1);
+        }
+        else
+        {
+            Context context = getApplicationContext();
+            CharSequence text = "Passwords do not match!";
+            int duration = Toast.LENGTH_LONG;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        }
+    }
+
+    public void setName(){
         temp = (TextView) findViewById(R.id.fNameEdit);
         this.fName = (String)temp.getText().toString();
+        thisUser.setFirstName(this.fName);
 
         temp = (TextView) findViewById(R.id.lNameEdit);
         this.lName = (String)temp.getText().toString();
+        thisUser.setLastName(this.lName);
+    }
 
+    public void setStudentInfo(){
         temp = (TextView) findViewById(R.id.semesterCreate);
         this.semester = (String)temp.getText().toString();
+        thisUser.setSemester(this.semester);
 
         temp = (TextView) findViewById(R.id.demoEdit);
         this.demograph = (String)temp.getText().toString();
+        thisUser.setDemog(this.demograph);
+    }
+    public void setAdd() {
 
         temp = (TextView) findViewById(R.id.address);
-        this.address = (String)temp.getText().toString();
-
+        this.address = (String) temp.getText().toString();
+        thisUser.setAddress(this.address);
     }
 }

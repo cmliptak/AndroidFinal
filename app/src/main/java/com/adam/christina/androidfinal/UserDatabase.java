@@ -1,3 +1,5 @@
+package com.adam.christina.androidfinal;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -117,7 +119,7 @@ public class UserDatabase extends SQLiteOpenHelper {
 
         // 4. build user object
         User person = new User();
-        person.setUserId(Integer.parseInt(cursor.getString(0)));
+        person.setUserId(cursor.getString(0));
         person.setUserPass(cursor.getString(1));
         person.setFirstName(cursor.getString(2));
         person.setLastName(cursor.getString(3));
@@ -147,7 +149,7 @@ public class UserDatabase extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             do {
                 person = new User();
-                person.setUserId(Integer.parseInt(cursor.getString(0)));
+                person.setUserId(cursor.getString(0));
                 person.setUserPass(cursor.getString(1));
                 person.setFirstName(cursor.getString(2));
                 person.setLastName(cursor.getString(3));

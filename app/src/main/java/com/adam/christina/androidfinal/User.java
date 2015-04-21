@@ -1,3 +1,5 @@
+package com.adam.christina.androidfinal;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -15,7 +17,7 @@ import com.adam.christina.androidfinal.R;
  */
 public class User extends Activity{
 
-    private int userId;
+    private String userId;
     private String userPass;
     private String firstName;
     private String lastName;
@@ -35,7 +37,7 @@ public class User extends Activity{
     }
 
     //Setters
-    public void setUserId(int userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
@@ -66,7 +68,7 @@ public class User extends Activity{
 
     //Getters
 
-    public int getUserId() {
+    public String getUserId() {
         return userId;
     }
 
