@@ -24,6 +24,7 @@ public class User extends Activity{
     private String address;
     private String demog;
     private String semester;
+    UserDatabase db = new UserDatabase();
 
     /*TextView id = (TextView)findViewById(R.id.user);
     TextView pass = (TextView)findViewById(R.id.passWord);
@@ -31,7 +32,7 @@ public class User extends Activity{
 
     public User(){}
 
-    public User(String title, String author) {
+    public User(String user) {
         super();
 
     }
@@ -95,4 +96,11 @@ public class User extends Activity{
     public String getLastName() {
         return lastName;
     }
+
+
+    public void quaryDB () {
+
+
+    }
+
 }

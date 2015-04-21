@@ -53,9 +53,14 @@ public class MainActivity extends ActionBarActivity {
         TextView temp = (TextView) findViewById(R.id.userName);
         String userName = (String)temp.getText().toString();
 
+        User tempUser = new User ();
+        tempUser.setUserId(userName);
+
         temp = (TextView) findViewById(R.id.passWord);
         String password = (String)temp.getText().toString();
 
+        UserDatabase db =new UserDatabase(getBaseContext());
+        db.
 
         boolean salmon = true;
 

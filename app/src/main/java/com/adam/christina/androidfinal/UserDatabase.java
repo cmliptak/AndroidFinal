@@ -73,6 +73,8 @@ public class UserDatabase extends SQLiteOpenHelper {
     private static final String[] COLUMNS = {USERID, USERPASS, USERFIRST, USERLAST, USERADDRESS, USERDEMO, SEMESTER};
 
 
+
+
     // inserts a new user into the database
     public void addUser(User person){
         Log.d("addUser", person.toString());
@@ -97,7 +99,7 @@ public class UserDatabase extends SQLiteOpenHelper {
         db.close();
     }
 
-    public User getUser(int id){
+    public User getUser(String id){
 
         // 1. get reference to readable DB
         SQLiteDatabase db = this.getReadableDatabase();
