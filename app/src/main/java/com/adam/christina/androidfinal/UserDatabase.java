@@ -34,15 +34,16 @@ public class UserDatabase extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         //Create User table if none exists
-        String CREATE_USER_TABLE = "CREATE TABLE USER "
-                + TABLE_USER + "(" + USERID      + "String Primary ID,"
-                + USERPASS    + "TEXT,"
-                + USERFIRST   + "TEXT,"
-                + USERLAST    + "TEXT,"
-                + USERADDRESS + "TEXT,"
-                + USERDEMO   + "TEXT,"
-                + SEMESTER   + "TEXT,"
-                + ")";
+        String CREATE_USER_TABLE = "CREATE TABLE IF NOT EXISTS "
+                + TABLE_USER + "("
+                + USERID      + " TEXT PRIMARY KEY, "
+                + USERPASS    + " TEXT, "
+                + USERFIRST   + " TEXT, "
+                + USERLAST    + " TEXT, "
+                + USERADDRESS + " TEXT, "
+                + USERDEMO   + " TEXT, "
+                + SEMESTER   + " TEXT"
+                + ");";
 
 
         // create User table

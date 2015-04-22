@@ -24,13 +24,17 @@ public class CreateUser extends ActionBarActivity {
     private  String demograph ;
     private String address ;
     private TextView temp;
-    User thisUser = new User();
-    UserDatabase db = new UserDatabase(getBaseContext());
+    User thisUser;
+    UserDatabase db;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_user);
+        thisUser = new User();
+        db = new UserDatabase(getBaseContext());
+
     }
 
 
@@ -111,18 +115,18 @@ public class CreateUser extends ActionBarActivity {
 //
     public void setUser(){
         temp = (TextView) findViewById(R.id.user);
-        this.userName = (String)temp.getText().toString();
+        this.userName = temp.getText().toString();
         thisUser.setUserId(this.userName);
     }
 
     public void setPassword(){
         //password
         temp = (TextView) findViewById(R.id.pass);
-        this.password1 = (String)temp.getText().toString();
+        this.password1 = temp.getText().toString();
 
         //confirm password
         temp = (TextView) findViewById(R.id.confirmPass);
-        this.password2 = (String)temp.getText().toString();
+        this.password2 = temp.getText().toString();
 
         //Check if password confirmation matches
         if(this.password1.equals(this.password2))
@@ -143,28 +147,28 @@ public class CreateUser extends ActionBarActivity {
     public void setName(){
         //FirstName
         temp = (TextView) findViewById(R.id.fNameEdit);
-        this.fName = (String)temp.getText().toString();
+        this.fName = temp.getText().toString();
         thisUser.setFirstName(this.fName);
 
         //LastName
         temp = (TextView) findViewById(R.id.lNameEdit);
-        this.lName = (String)temp.getText().toString();
+        this.lName = temp.getText().toString();
         thisUser.setLastName(this.lName);
     }
 
     public void setStudentInfo(){
         temp = (TextView) findViewById(R.id.semesterCreate);
-        this.semester = (String)temp.getText().toString();
+        this.semester = temp.getText().toString();
         thisUser.setSemester(this.semester);
 
         temp = (TextView) findViewById(R.id.demoEdit);
-        this.demograph = (String)temp.getText().toString();
+        this.demograph = temp.getText().toString();
         thisUser.setDemog(this.demograph);
     }
     public void setAdd() {
 
         temp = (TextView) findViewById(R.id.address);
-        this.address = (String) temp.getText().toString();
+        this.address =  temp.getText().toString();
         thisUser.setAddress(this.address);
     }
 }

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class Home extends ActionBarActivity {
@@ -14,6 +15,11 @@ public class Home extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        User thisUser = new User();
+        TextView info = (TextView)findViewById(R.id.studentInfo);
+        info.setText(thisUser.getUserId().toString()) ;
+
     }
 
 
