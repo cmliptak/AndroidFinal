@@ -100,15 +100,13 @@ public class UserDatabase extends SQLiteOpenHelper {
         db.close();
     }
 
-        public User getUser(String id){
+    public User getUser(String id){
 
         // 1. get reference to readable DB
         SQLiteDatabase db = this.getReadableDatabase();
 
-        String query = "SELECT * FROM " + TABLE_USER + " WHERE " + USERID + " = '" + id + "'";
         // 2. build query
-        Cursor cursor = db.rawQuery(query, null);
-                /*
+        Cursor cursor =
                 db.query(TABLE_USER, // a. table
                         COLUMNS, // b. column names
                         " id = ?", // c. selections
@@ -116,7 +114,7 @@ public class UserDatabase extends SQLiteOpenHelper {
                         null, // e. group by
                         null, // f. having
                         null, // g. order by
-                        null); // h. limit*/
+                        null); // h. limit
 
         // 3. if we got results get the first one
         if (cursor != null)

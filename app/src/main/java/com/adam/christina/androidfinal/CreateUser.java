@@ -64,11 +64,10 @@ public class CreateUser extends ActionBarActivity {
     public void newMemberLog(View view){
         //next 6 lines added 4/22 00:39
         setUser();
-        /*
         setPassword();
         setName();
         setStudentInfo();
-        setAdd();*/
+        setAdd();
 
         db.addUser(thisUser);
 
