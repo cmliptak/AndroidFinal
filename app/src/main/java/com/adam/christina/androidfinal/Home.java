@@ -18,7 +18,9 @@ public class Home extends ActionBarActivity {
 
         User thisUser = new User();
         TextView info = (TextView)findViewById(R.id.studentInfo);
-        info.setText(thisUser.getUserId().toString()) ;
+
+        info.setText(thisUser.toString());
+
 
     }
 
