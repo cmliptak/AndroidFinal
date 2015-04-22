@@ -24,16 +24,26 @@ public class User extends Activity{
     private String address;
     private String demog;
     private String semester;
-    UserDatabase db = new UserDatabase();
 
-    /*TextView id = (TextView)findViewById(R.id.user);
-    TextView pass = (TextView)findViewById(R.id.passWord);
-    TextView fname = (TextView)findViewById(R.id.fName);*/
+//Constructors
+    public User(){
+        this.setUserId("");
+        this.setUserPass("");
+        this.setLastName("");
+        this.setFirstName("");
+        this.setAddress("");
+        this.setDemog("");
+        this.setSemester("");
+    }
 
-    public User(){}
-
-    public User(String user) {
-        super();
+    public User(String userId, String userPass, String firstName, String lastName, String address, String demog, String semester) {
+        this.setUserId(userId);
+        this.setUserPass(userPass);
+        this.setFirstName(firstName);
+        this.setLastName(lastName);
+        this.setAddress(address);
+        this.setDemog(demog);
+        this.setSemester(semester);
 
     }
 

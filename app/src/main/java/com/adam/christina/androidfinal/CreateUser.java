@@ -25,6 +25,7 @@ public class CreateUser extends ActionBarActivity {
     private String address ;
     private TextView temp;
     User thisUser = new User();
+    UserDatabase db = new UserDatabase(getBaseContext());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +58,17 @@ public class CreateUser extends ActionBarActivity {
 
 
     public void newMemberLog(View view){
+        //next 6 lines added 4/22 00:39
+        setUser();
+        setPassword();
+        setName();
+        setStudentInfo();
+        setAdd();
 
+        db.addUser(thisUser);
+
+
+        //notify user; login
         Context context = getApplicationContext();
         CharSequence text = "Account created. Please log in";
         int duration = Toast.LENGTH_LONG;
@@ -85,7 +96,7 @@ public class CreateUser extends ActionBarActivity {
     private String lastName;
     private String address;
     private String demog;
-    private String semester;*/
+    private String semester;
 
     public void pullInfo ()  {
 
@@ -95,8 +106,9 @@ public class CreateUser extends ActionBarActivity {
        setStudentInfo();
        setAdd();
 
-    }
+    }*/
 
+//
     public void setUser(){
         temp = (TextView) findViewById(R.id.user);
         this.userName = (String)temp.getText().toString();
@@ -104,13 +116,15 @@ public class CreateUser extends ActionBarActivity {
     }
 
     public void setPassword(){
-
+        //password
         temp = (TextView) findViewById(R.id.pass);
         this.password1 = (String)temp.getText().toString();
 
+        //confirm password
         temp = (TextView) findViewById(R.id.confirmPass);
         this.password2 = (String)temp.getText().toString();
 
+        //Check if password confirmation matches
         if(this.password1.equals(this.password2))
         {
             thisUser.setUserPass(this.password1);
@@ -127,10 +141,12 @@ public class CreateUser extends ActionBarActivity {
     }
 
     public void setName(){
+        //FirstName
         temp = (TextView) findViewById(R.id.fNameEdit);
         this.fName = (String)temp.getText().toString();
         thisUser.setFirstName(this.fName);
 
+        //LastName
         temp = (TextView) findViewById(R.id.lNameEdit);
         this.lName = (String)temp.getText().toString();
         thisUser.setLastName(this.lName);
