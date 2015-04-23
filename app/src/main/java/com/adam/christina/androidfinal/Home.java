@@ -20,7 +20,7 @@ public class Home extends ActionBarActivity {
         TextView info = (TextView)findViewById(R.id.studentInfo);
 
         info.setText(thisUser.toString());
-
+//comments
 
     }
 
