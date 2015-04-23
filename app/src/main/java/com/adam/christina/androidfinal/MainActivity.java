@@ -60,6 +60,8 @@ public class MainActivity extends ActionBarActivity {
         UserDatabase db = new UserDatabase(getBaseContext());
         db.getUser(userName);
 
+
+
 /*commented out 4/22 00:45
         //UserDatabase db =new UserDatabase(getBaseContext());
         //db.getUser(userName);

@@ -27,13 +27,13 @@ public class User extends Activity{
 
 //Constructors
     public User(){
-        this.setUserId("");
+        /*this.setUserId("");
         this.setUserPass("");
         this.setLastName("");
         this.setFirstName("");
         this.setAddress("");
         this.setDemog("");
-        this.setSemester("");
+        this.setSemester("");*/
     }
 
     public User(String userId, String userPass, String firstName, String lastName, String address, String demog, String semester) {
@@ -75,7 +75,12 @@ public class User extends Activity{
     public void setSemester(String semester) {
         this.semester = semester;
     }
-
+    @Override
+    public String toString(){
+        return "Username: " + this.userId + "\n"
+                +"First Name: " + this.firstName + "\n"
+                +"Last Name: " + this.lastName;
+    }
 
     //Getters
 
