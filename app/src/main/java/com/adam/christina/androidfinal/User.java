@@ -77,9 +77,12 @@ public class User extends Activity{
     }
     @Override
     public String toString(){
-        return "Username: " + this.userId + "\n"
-                +"First Name: " + this.firstName + "\n"
-                +"Last Name: " + this.lastName;
+        return "Username: " + this.userId + "\n" + "\n"
+                +"First Name: " + this.firstName + "\n" + "\n"
+                +"Last Name: " + this.lastName + "\n" + "\n"
+                +"Demographic: " + this.demog + "\n" + "\n"
+                +"Semester: " + this.semester;
+
     }
 
     //Getters
@@ -112,10 +115,5 @@ public class User extends Activity{
         return lastName;
     }
 
-
-    public void quaryDB () {
-
-
-    }
 
 }

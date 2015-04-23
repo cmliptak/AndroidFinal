@@ -10,13 +10,13 @@ import android.widget.TextView;
 
 
 public class Home extends ActionBarActivity {
-
+    User thisUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        User thisUser = new User();
+        thisUser = new User();
         TextView info = (TextView)findViewById(R.id.studentInfo);
 
         info.setText(thisUser.toString());
