@@ -49,6 +49,7 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
+
     public void loginScreen(View view){
         TextView temp = (TextView) findViewById(R.id.userName);
         String userName = (String)temp.getText().toString();
@@ -58,7 +59,18 @@ public class MainActivity extends ActionBarActivity {
 
 
         UserDatabase db = new UserDatabase(getBaseContext());
+
+       /*added next 8 lines 4/23 01:13
+        User user = new User();
         db.getUser(userName);
+
+        if(user.getUserId().equals(userName)){
+            Intent loginBtn = new Intent(this, Home.class);
+            startActivity(loginBtn);
+        }*/
+
+
+
 
 
 
@@ -68,7 +80,7 @@ public class MainActivity extends ActionBarActivity {
 */
  /*
     db.set
- */
+
         boolean salmon = true;
 
         if  (salmon == true) {
@@ -85,7 +97,7 @@ public class MainActivity extends ActionBarActivity {
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
         }
-
+        */
 
     }
 

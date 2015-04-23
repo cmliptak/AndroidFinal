@@ -10,11 +10,13 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.List;
+
 
 public class CreateUser extends ActionBarActivity {
 
 
-    // declare fields
+    //Commented 4/23 00:58 declare fields
     private   String userName ;
     private  String password1 ;
     private String password2 ;
@@ -26,15 +28,27 @@ public class CreateUser extends ActionBarActivity {
     private TextView temp;
     User thisUser;
     UserDatabase db;
-
+    /*
+    TextView userName;
+    TextView password1;
+    TextView confirm;
+    TextView firstName;
+    TextView lastName;
+    TextView address;
+    TextView demog;
+    TextView semester;
+    UserDatabase db;
+    List<User> allUsers;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_user);
+
+        //next 2 lines commented out 4/23 00:58
         thisUser = new User();
         db = new UserDatabase(getBaseContext());
-
+        //setGui();
     }
 
 
@@ -61,21 +75,22 @@ public class CreateUser extends ActionBarActivity {
     }
 
 
+// Commented out 4/23 00:58
     public void newMemberLog(View view){
         //next 6 lines added 4/22 00:39
         setUser();
-        /*
+
         setPassword();
         setName();
         setStudentInfo();
-        setAdd();*/
+        setAdd();
 
         db.addUser(thisUser);
 
 
         //notify user; login
         Context context = getApplicationContext();
-        CharSequence text = "Account created. Please log in";
+        CharSequence text = thisUser.toString();
         int duration = Toast.LENGTH_LONG;
 
         Toast toast = Toast.makeText(context, text, duration);
@@ -90,10 +105,6 @@ public class CreateUser extends ActionBarActivity {
         startActivity(backBtn);
     }
 
-    public void writeToDB(){
-
-
-    }
 
     /*private int userId;
     private String userPass;
@@ -113,7 +124,7 @@ public class CreateUser extends ActionBarActivity {
 
     }*/
 
-//
+
     public void setUser(){
         temp = (TextView) findViewById(R.id.user);
         this.userName = temp.getText().toString();
@@ -172,4 +183,5 @@ public class CreateUser extends ActionBarActivity {
         this.address =  temp.getText().toString();
         thisUser.setAddress(this.address);
     }
+
 }
