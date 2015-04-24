@@ -19,6 +19,7 @@ import java.io.Serializable;
 public class MainActivity extends ActionBarActivity implements Serializable {
 
     private User thisUser;
+    Boolean flag;
 
 
     @Override
@@ -62,7 +63,6 @@ public class MainActivity extends ActionBarActivity implements Serializable {
 
     }
 
-
     public void loginScreen(View view){
         TextView temp = (TextView) findViewById(R.id.userName);
         String userName = (String)temp.getText().toString();
@@ -70,7 +70,7 @@ public class MainActivity extends ActionBarActivity implements Serializable {
         temp = (TextView) findViewById(R.id.passWord);
         String password = (String)temp.getText().toString();
 
-
+        validateLogin();
         //UserDatabase db = new UserDatabase(getBaseContext());
 
       //added next 8 lines 4/23 01:13
@@ -83,8 +83,8 @@ public class MainActivity extends ActionBarActivity implements Serializable {
 
         boolean salmon = true;
 
-        if  (salmon == true) {
-
+        //if  (salmon == true) {
+        if(flag == true){
             Intent loginBtn = new Intent(this, Home.class);
             startActivity(loginBtn);
 
@@ -106,10 +106,25 @@ public class MainActivity extends ActionBarActivity implements Serializable {
         }
 
 
-    }
+    }//end login
 
     public void forgotInfo(View view){
         Intent ForgotBtn = new Intent(this, Forgot.class);
         startActivity(ForgotBtn);
-    }
-}
+    }//endforgot info
+
+    public void validateLogin(){
+        TextView a = (TextView) findViewById(R.id.userName);
+        TextView b = (TextView) findViewById(R.id.userName);
+
+        if(a.getText().toString().isEmpty() || b.getText().toString().isEmpty()){
+            Context context = getApplicationContext();
+            CharSequence text = "There are empty fields";
+            int duration = Toast.LENGTH_LONG;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+            flag = false;
+        }//end if
+    }//end validate
+}//end class

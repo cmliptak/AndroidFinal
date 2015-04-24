@@ -14,7 +14,7 @@
 
         android:text="@string/title1"
         android:id="@+id/textView1"
-        android:layout_alignParentTop="true"
+
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="45dp"
         />
@@ -26,8 +26,9 @@
         android:text="@string/aA"
         android:id="@+id/textView2"
         android:layout_below="@+id/textView1"
-        android:layout_alignParentStart="true"
+        android:layout_marginStart="60dp"
         android:layout_marginBottom="25dp"
+
         />
             <EditText
                 android:layout_width="wrap_content"
@@ -36,7 +37,13 @@
                 android:ems="10"
                 android:id="@+id/A"
                 android:layout_alignTop="@+id/textView2"
-                android:layout_alignRight="@+id/button5" />
+                android:layout_alignRight="@+id/button5"
+                android:lines="1"
+                android:layout_marginLeft="30dp"
+                android:singleLine="true"
+                android:minWidth="10dp"
+                android:layout_alignStart="@+id/textView7"
+                android:minHeight="25dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -45,7 +52,7 @@
         android:text="@string/aB"
         android:id="@+id/textView3"
         android:layout_below="@+id/textView2"
-        android:layout_alignParentStart="true"
+        android:layout_marginStart="60dp"
         android:layout_marginBottom="25dp"
         />
             <EditText
@@ -55,7 +62,8 @@
                 android:ems="10"
                 android:id="@+id/B"
                 android:layout_alignTop="@+id/textView3"
-                android:layout_alignRight="@+id/button5" />
+                android:layout_alignRight="@+id/button5"
+                android:layout_alignStart="@+id/A" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -64,7 +72,7 @@
         android:text="@string/aC"
         android:id="@+id/textView4"
         android:layout_below="@+id/textView3"
-        android:layout_alignParentStart="true"
+        android:layout_marginStart="60dp"
         android:layout_marginBottom="25dp"
         />
             <EditText
@@ -74,7 +82,8 @@
                 android:ems="10"
                 android:id="@+id/C"
                 android:layout_alignTop="@+id/textView4"
-                android:layout_alignRight="@+id/button5" />
+                android:layout_alignRight="@+id/button5"
+                android:layout_alignStart="@+id/B" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -83,7 +92,7 @@
         android:text="@string/aD"
         android:id="@+id/textView5"
         android:layout_below="@+id/textView4"
-        android:layout_alignParentStart="true"
+        android:layout_marginStart="60dp"
         android:layout_marginBottom="25dp"
         />
             <EditText
@@ -93,7 +102,8 @@
                 android:ems="10"
                 android:id="@+id/D"
                 android:layout_alignTop="@+id/textView5"
-                android:layout_alignRight="@+id/button5" />
+                android:layout_alignRight="@+id/button5"
+                android:layout_alignStart="@+id/C" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -102,7 +112,7 @@
         android:text="@string/aF"
         android:id="@+id/textView6"
         android:layout_below="@+id/textView5"
-        android:layout_alignParentStart="true"
+        android:layout_marginStart="60dp"
         android:layout_marginBottom="50dp"
         />
 
@@ -113,7 +123,8 @@
                 android:ems="10"
                 android:id="@+id/F"
                 android:layout_alignTop="@+id/textView6"
-                android:layout_alignRight="@+id/button5" />
+                android:layout_alignRight="@+id/button5"
+                android:layout_alignStart="@+id/D" />
 
     <TextView
         android:layout_width="wrap_content"

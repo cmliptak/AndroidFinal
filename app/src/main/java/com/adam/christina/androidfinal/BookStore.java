@@ -73,7 +73,7 @@ public class BookStore extends ActionBarActivity {
         String site = (String)temp.getText().toString();
 
         if (!site.contains("http://www.")) {
-            site = "http://www." + site;
+            site = "http://www." + site + ".com";
             Intent webIntent = new Intent(Intent.ACTION_VIEW);
             webIntent.setData(Uri.parse(site));
             startActivity(webIntent);
