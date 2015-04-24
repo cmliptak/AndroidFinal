@@ -26,8 +26,8 @@ public class MainActivity extends ActionBarActivity implements Serializable {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-   //     String activityType = (String)getIntent().getSerializableExtra("USER");
-    //    thisUser = (User)getIntent().getSerializableExtra("USER");
+
+       thisUser = (User)getIntent().getSerializableExtra("USER");
 
 
     }

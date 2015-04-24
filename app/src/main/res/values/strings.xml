@@ -86,4 +86,14 @@
     <string name="search"> search</string>
     <string name="title">Search for a book</string>
 
+    <!--GPA resorces-->
+    <string name="title1">Answer the fallowing: How many credit Hours did you receive</string>
+    <string name="aA"> an A?</string>
+    <string name="aB"> a B?</string>
+    <string name="aC"> a C?</string>
+    <string name="aD"> a D?</string>
+    <string name="aF"> a F?</string>
+    <string name="GPA"> </string>
+    <string name="calc">Calculate</string>
+
 </resources>

@@ -1,6 +1,7 @@
 package com.adam.christina.androidfinal;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -39,15 +40,30 @@ public class BookStore extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void searchAmazon (View view){
+
+        Intent webIntent = new Intent(Intent.ACTION_VIEW);
+        webIntent.setData(Uri.parse("http://www.amazon.com"));
+        startActivity(webIntent);
+
+
+    }
+
     public void searchCheg (View view){
-        Intent chegBtn = new Intent(this, MainActivity.class);
-        startActivity(chegBtn);
+
+        Intent webIntent = new Intent(Intent.ACTION_VIEW);
+        webIntent.setData(Uri.parse("http://www.chegg.com"));
+        startActivity(webIntent);
 
     }
 
     public void searchBarns (View view){
-        Intent barnsBtn = new Intent(this, MainActivity.class);
-        startActivity(barnsBtn);
+
+        Intent webIntent = new Intent(Intent.ACTION_VIEW);
+        webIntent.setData(Uri.parse("http://www.bn.com"));
+        startActivity(webIntent);
+
 
     }
 
@@ -56,8 +72,19 @@ public class BookStore extends ActionBarActivity {
         TextView temp = (TextView) findViewById(R.id.ownSite);
         String site = (String)temp.getText().toString();
 
-        Intent searchBtn = new Intent(this, MainActivity.class);
-        startActivity(searchBtn);
+        if (!site.contains("http://www.")) {
+            site = "http://www." + site;
+            Intent webIntent = new Intent(Intent.ACTION_VIEW);
+            webIntent.setData(Uri.parse(site));
+            startActivity(webIntent);
+        }
+
+        else {
+            Intent webIntent = new Intent(Intent.ACTION_VIEW);
+            webIntent.setData(Uri.parse(site));
+            startActivity(webIntent);
+        }
+
 
     }
 
