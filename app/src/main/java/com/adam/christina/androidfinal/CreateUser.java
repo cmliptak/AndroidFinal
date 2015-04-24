@@ -2,6 +2,7 @@ package com.adam.christina.androidfinal;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,10 +11,11 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.List;
 
 
-public class CreateUser extends ActionBarActivity {
+public class CreateUser extends ActionBarActivity implements Serializable {
 
 
     //Commented 4/23 00:58 declare fields
@@ -28,17 +30,8 @@ public class CreateUser extends ActionBarActivity {
     private TextView temp;
     User thisUser;
     UserDatabase db;
-    /*
-    TextView userName;
-    TextView password1;
-    TextView confirm;
-    TextView firstName;
-    TextView lastName;
-    TextView address;
-    TextView demog;
-    TextView semester;
-    UserDatabase db;
-    List<User> allUsers;*/
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,18 +83,22 @@ public class CreateUser extends ActionBarActivity {
 
         //notify user; login
         Context context = getApplicationContext();
+
         CharSequence text = thisUser.toString();
         int duration = Toast.LENGTH_LONG;
-
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
 
+        // make an intent and wrap a class in the intent
+
         Intent button4 = new Intent(this, MainActivity.class);
+        button4.putExtra("USER",(Serializable) thisUser);
         startActivity(button4);
     }
 
     public void backBtn(View view){
         Intent backBtn = new Intent(this, MainActivity.class);
+
         startActivity(backBtn);
     }
 
