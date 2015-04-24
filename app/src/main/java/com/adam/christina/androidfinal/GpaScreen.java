@@ -46,24 +46,59 @@ public class GpaScreen extends ActionBarActivity {
 
     public void calculate(View view){
 
+        int a, b , c, d, f;
+
         temp = (TextView) findViewById(R.id.A);
-        int a = Integer.parseInt(temp.getText().toString());
+        if (temp.getText().toString().equals("") ) {
+            a =  0;
+        }
+        else {
+            a = Integer.parseInt(temp.getText().toString());
+        }
 
         temp = (TextView) findViewById(R.id.B);
-        int b = Integer.parseInt(temp.getText().toString());
+        if (temp.getText().toString().equals("") ) {
+            b =  0;
+        }
+        else {
+            b = Integer.parseInt(temp.getText().toString());
+        }
 
         temp = (TextView) findViewById(R.id.C);
-        int c = Integer.parseInt(temp.getText().toString());
+        if (temp.getText().toString().equals("") ) {
+            c =  0;
+        }
+        else {
+            c = Integer.parseInt(temp.getText().toString());
+        }
 
         temp = (TextView) findViewById(R.id.D);
-        int d = Integer.parseInt(temp.getText().toString());
+        if (temp.getText().toString().equals("") ) {
+            d =  0;
+        }
+        else {
+            d = Integer.parseInt(temp.getText().toString());
+        }
 
         temp = (TextView) findViewById(R.id.F);
-        int f = Integer.parseInt(temp.getText().toString());
+        if (temp.getText().toString().equals("") ) {
+            f =  0;
+        }
+        else {
+            f = Integer.parseInt(temp.getText().toString());
+        }
+
 
         int totalCredits = a + b + c + d + f;
-        double gpa = ((a * 4) + (b * 3) + (c * 2) + (d * 1))/totalCredits;
 
+        double gpa;
+
+        if (totalCredits >= 0) {
+            gpa = ((a * 4) + (b * 3) + (c * 2) + (d * 1)) / totalCredits;
+        }
+        else{
+            gpa = 0;
+        }
         TextView info = (TextView)findViewById(R.id.textView7);
         String gpa1 = "" + gpa;
         info.setText(gpa1);

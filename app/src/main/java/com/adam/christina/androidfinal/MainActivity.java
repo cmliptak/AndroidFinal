@@ -95,7 +95,7 @@ public class MainActivity extends ActionBarActivity implements Serializable {
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
         }
-
+/*
         else {
             Context context = getApplicationContext();
             CharSequence text = "Wrong user name or password entered";
@@ -104,7 +104,7 @@ public class MainActivity extends ActionBarActivity implements Serializable {
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
         }
-
+*/
 
     }//end login
 
