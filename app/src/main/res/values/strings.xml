@@ -41,7 +41,7 @@
         <string name="calcGpa">Calculate</string>
         <!--Tuition Calculation-->
         <string name="title_activity_tuition_calc">TuitionCalc</string>
-        <string name="numClass">Number of Classes</string>
+        <string name="numClass">Number of Credits</string>
         <string name="tuitionCost">Tuition Cost</string>
         <string name="instateDiscount">Instate Discount</string>
         <string name="estBooks">Books Estimation</string>
@@ -81,12 +81,12 @@
         <string name="title_activity_create_user">Create User</string>
 
     <string-array name="demographic">
-        <item>Select an Ethnicity</item>
-        <item>African-American</item>
-        <item>Asain</item>
-        <item>caucasian</item>
-        <item>Hispanic</item>
-        <item>Native-American</item>
+        <item>Select your demographic</item>
+        <item>Freshman</item>
+        <item>Sophmore</item>
+        <item>Junior</item>
+        <item>Senior</item>
+        <item>Graduate</item>
     </string-array>
 
     <!--book store resorces-->
@@ -97,7 +97,7 @@
     <string name="title">Search for a book</string>
 
     <!--GPA resorces-->
-    <string name="title1">Answer the fallowing: How many credit Hours did you receive</string>
+    <string name="title1">Answer the following: How many credit hours did you receive</string>
     <string name="aA"> an A?</string>
     <string name="aB"> a B?</string>
     <string name="aC"> a C?</string>
