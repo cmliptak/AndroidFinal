@@ -88,6 +88,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/spinner"
+            android:layout_marginTop="44dp"
+            android:layout_below="@+id/lNameEdit"
+            android:layout_alignLeft="@+id/fNameEdit"
+            android:layout_alignStart="@+id/fNameEdit"
+            android:minWidth="300dp"
             android:minHeight="40dp"
             android:layout_row="5"
             android:layout_column="0" />
@@ -101,7 +106,7 @@
             android:layout_marginTop="44dp"
             android:hint="@string/semester"
             android:inputType="text"
-            android:layout_above="@+id/button4"
+            android:layout_below="@+id/spinner"
             android:layout_alignLeft="@+id/address"
             android:layout_alignStart="@+id/address"
             android:layout_row="6"
@@ -132,7 +137,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:onClick="newMemberLog"
-            android:layout_row="8"
+            android:layout_row="9"
             android:layout_column="0" />
 
 
