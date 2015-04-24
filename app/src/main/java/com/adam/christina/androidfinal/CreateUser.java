@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,7 +18,7 @@ import java.io.Serializable;
 import java.util.List;
 
 
-public class CreateUser extends ActionBarActivity implements Serializable {
+public class CreateUser extends ActionBarActivity implements Serializable, AdapterView.OnItemSelectedListener {
 
 
     //Commented 4/23 00:58 declare fields
@@ -31,12 +34,18 @@ public class CreateUser extends ActionBarActivity implements Serializable {
     User thisUser;
     UserDatabase db;
 
+    Spinner spinner;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_user);
+
+        spinner = (Spinner) findViewById(R.id.spinner);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.demographic,android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
 
         //next 2 lines commented out 4/23 00:58
         thisUser = new User();
@@ -92,7 +101,7 @@ public class CreateUser extends ActionBarActivity implements Serializable {
         // make an intent and wrap a class in the intent
 
         Intent button4 = new Intent(this, MainActivity.class);
-        button4.putExtra("USER",(Serializable) thisUser);
+       // button4.putExtra("USER",(Serializable) thisUser);
         startActivity(button4);
     }
 
@@ -170,9 +179,7 @@ public class CreateUser extends ActionBarActivity implements Serializable {
         this.semester = temp.getText().toString();
         thisUser.setSemester(this.semester);
 
-        temp = (TextView) findViewById(R.id.demoEdit);
-        this.demograph = temp.getText().toString();
-        thisUser.setDemog(this.demograph);
+
     }
     public void setAdd() {
 
@@ -181,4 +188,15 @@ public class CreateUser extends ActionBarActivity implements Serializable {
         thisUser.setAddress(this.address);
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        TextView text = (TextView) view;
+        this.demograph = text.getText().toString();
+        thisUser.setDemog(this.demograph);
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 }

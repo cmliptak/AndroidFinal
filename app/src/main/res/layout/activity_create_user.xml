@@ -84,6 +84,14 @@
             android:layout_row="4"
             android:layout_column="0" />
 
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:minHeight="40dp"
+            android:layout_row="5"
+            android:layout_column="0" />
+
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -96,20 +104,6 @@
             android:layout_above="@+id/button4"
             android:layout_alignLeft="@+id/address"
             android:layout_alignStart="@+id/address"
-            android:layout_row="5"
-            android:layout_column="0" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/demoEdit"
-            android:hint="@string/year"
-            android:minWidth="300dp"
-            android:minHeight="40dp"
-            android:layout_marginTop="44dp"
-            android:layout_above="@+id/button4"
-            android:layout_alignLeft="@+id/semesterCreate"
-            android:layout_alignStart="@+id/semesterCreate"
             android:layout_row="6"
             android:layout_column="0" />
 
@@ -126,7 +120,7 @@
             android:layout_above="@+id/semesterCreate"
             android:layout_alignLeft="@+id/lNameEdit"
             android:layout_alignStart="@+id/lNameEdit"
-            android:layout_row="7"
+            android:layout_row="8"
             android:layout_column="0" />
 
         <Button
@@ -153,7 +147,7 @@
             android:onClick="backBtn"
             android:layout_alignParentBottom="true"
             android:layout_alignStart="@+id/confirmPass"
-            android:layout_row="8"
+            android:layout_row="9"
             android:layout_column="0"
             android:layout_marginLeft="200dp"
             />

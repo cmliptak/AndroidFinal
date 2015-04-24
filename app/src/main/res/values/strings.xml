@@ -64,6 +64,7 @@
         <string name="class7Info">Class 7 Information; Time, Location, Professor</string>
         <string name="class8Info">Class 8 Information; Time, Location, Professor</string>
 
+    <!--Create user resorces-->
         <string name="user">User</string>
         <string name="pass">Password</string>
         <string name="confirmPass">Confirm</string>
@@ -78,6 +79,15 @@
         <string name="title_activity_home">Home</string>
         <string name="title_activity_forgot">Forgot</string>
         <string name="title_activity_create_user">Create User</string>
+
+    <string-array name="demographic">
+        <item>Select an Ethnicity</item>
+        <item>African-American</item>
+        <item>Asain</item>
+        <item>caucasian</item>
+        <item>Hispanic</item>
+        <item>Native-American</item>
+    </string-array>
 
     <!--book store resorces-->
     <string name="amazon">Search Amazon</string>
