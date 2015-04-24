@@ -12,10 +12,12 @@ import android.widget.TextView;
 
 import com.adam.christina.androidfinal.R;
 
+import java.io.Serializable;
+
 /**
  * Created by Christina on 4/19/2015.
  */
-public class User extends Activity{
+public class User extends Activity implements Serializable {
 
     private String userId;
     private String userPass;
@@ -24,16 +26,11 @@ public class User extends Activity{
     private String address;
     private String demog;
     private String semester;
+    UserDatabase thisUser =  new UserDatabase(getBaseContext());
 
 //Constructors
     public User(){
-        /*this.setUserId("");
-        this.setUserPass("");
-        this.setLastName("");
-        this.setFirstName("");
-        this.setAddress("");
-        this.setDemog("");
-        this.setSemester("");*/
+
     }
 
     public User(String userId, String userPass, String firstName, String lastName, String address, String demog, String semester) {
@@ -75,6 +72,8 @@ public class User extends Activity{
     public void setSemester(String semester) {
         this.semester = semester;
     }
+
+
     @Override
     public String toString(){
         return "Username: " + this.userId + "\n" + "\n"

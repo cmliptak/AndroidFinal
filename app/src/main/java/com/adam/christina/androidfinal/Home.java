@@ -8,8 +8,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import java.io.Serializable;
 
-public class Home extends ActionBarActivity {
+
+public class Home extends ActionBarActivity implements Serializable{
     User thisUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

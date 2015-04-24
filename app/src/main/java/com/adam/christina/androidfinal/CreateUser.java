@@ -2,18 +2,23 @@ package com.adam.christina.androidfinal;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.List;
 
 
-public class CreateUser extends ActionBarActivity {
+public class CreateUser extends ActionBarActivity implements Serializable, AdapterView.OnItemSelectedListener {
 
 
     //Commented 4/23 00:58 declare fields
@@ -28,22 +33,19 @@ public class CreateUser extends ActionBarActivity {
     private TextView temp;
     User thisUser;
     UserDatabase db;
-    /*
-    TextView userName;
-    TextView password1;
-    TextView confirm;
-    TextView firstName;
-    TextView lastName;
-    TextView address;
-    TextView demog;
-    TextView semester;
-    UserDatabase db;
-    List<User> allUsers;*/
+
+    Spinner spinner;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_user);
+
+        spinner = (Spinner) findViewById(R.id.spinner);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.demographic,android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
 
         //next 2 lines commented out 4/23 00:58
         thisUser = new User();
@@ -90,18 +92,22 @@ public class CreateUser extends ActionBarActivity {
 
         //notify user; login
         Context context = getApplicationContext();
+
         CharSequence text = thisUser.toString();
         int duration = Toast.LENGTH_LONG;
-
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
 
+        // make an intent and wrap a class in the intent
+
         Intent button4 = new Intent(this, MainActivity.class);
+       // button4.putExtra("USER",(Serializable) thisUser);
         startActivity(button4);
     }
 
     public void backBtn(View view){
         Intent backBtn = new Intent(this, MainActivity.class);
+
         startActivity(backBtn);
     }
 
@@ -173,9 +179,7 @@ public class CreateUser extends ActionBarActivity {
         this.semester = temp.getText().toString();
         thisUser.setSemester(this.semester);
 
-        temp = (TextView) findViewById(R.id.demoEdit);
-        this.demograph = temp.getText().toString();
-        thisUser.setDemog(this.demograph);
+
     }
     public void setAdd() {
 
@@ -184,4 +188,15 @@ public class CreateUser extends ActionBarActivity {
         thisUser.setAddress(this.address);
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        TextView text = (TextView) view;
+        this.demograph = text.getText().toString();
+        thisUser.setDemog(this.demograph);
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 }

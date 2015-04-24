@@ -27,7 +27,7 @@
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="45dp"
-        android:onClick="searchAmazon"
+        android:onClick="seachAmazon"
         android:minWidth="225dp" />
 
     <Button

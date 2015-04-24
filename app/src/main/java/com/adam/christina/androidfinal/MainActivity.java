@@ -10,13 +10,26 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.Serializable;
 
-public class MainActivity extends ActionBarActivity {
+
+
+
+
+public class MainActivity extends ActionBarActivity implements Serializable {
+
+    private User thisUser;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+       thisUser = (User)getIntent().getSerializableExtra("USER");
+
+
     }
 
 
@@ -58,28 +71,15 @@ public class MainActivity extends ActionBarActivity {
         String password = (String)temp.getText().toString();
 
 
-        UserDatabase db = new UserDatabase(getBaseContext());
+        //UserDatabase db = new UserDatabase(getBaseContext());
 
-       /*added next 8 lines 4/23 01:13
+      //added next 8 lines 4/23 01:13
         User user = new User();
-        db.getUser(userName);
+        // db.getUser(userName);
 
-        if(user.getUserId().equals(userName)){
-            Intent loginBtn = new Intent(this, Home.class);
-            startActivity(loginBtn);
-        }*/
-
-
-
-
-
-
-/*commented out 4/22 00:45
         //UserDatabase db =new UserDatabase(getBaseContext());
         //db.getUser(userName);
-*/
- /*
-    db.set
+
 
         boolean salmon = true;
 
@@ -87,6 +87,13 @@ public class MainActivity extends ActionBarActivity {
 
             Intent loginBtn = new Intent(this, Home.class);
             startActivity(loginBtn);
+
+            Context context = getApplicationContext();
+            CharSequence text = user.toString();
+            int duration = Toast.LENGTH_LONG;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
         }
 
         else {
@@ -97,7 +104,7 @@ public class MainActivity extends ActionBarActivity {
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
         }
-        */
+
 
     }
 

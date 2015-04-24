@@ -1,12 +1,18 @@
 package com.adam.christina.androidfinal;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 
 public class GpaScreen extends ActionBarActivity {
+
+
+    public TextView temp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,4 +42,40 @@ public class GpaScreen extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+    public void calculate(View view){
+
+        temp = (TextView) findViewById(R.id.A);
+        int a = Integer.parseInt(temp.getText().toString());
+
+        temp = (TextView) findViewById(R.id.B);
+        int b = Integer.parseInt(temp.getText().toString());
+
+        temp = (TextView) findViewById(R.id.C);
+        int c = Integer.parseInt(temp.getText().toString());
+
+        temp = (TextView) findViewById(R.id.D);
+        int d = Integer.parseInt(temp.getText().toString());
+
+        temp = (TextView) findViewById(R.id.F);
+        int f = Integer.parseInt(temp.getText().toString());
+
+        int totalCredits = a + b + c + d + f;
+        double gpa = ((a * 4) + (b * 3) + (c * 2) + (d * 1))/totalCredits;
+
+        TextView info = (TextView)findViewById(R.id.textView7);
+        String gpa1 = "" + gpa;
+        info.setText(gpa1);
+
+
+
+    }
+
+    public void backHome(View view) {
+
+        Intent backHome = new Intent(this, Home.class);
+        startActivity(backHome);
+    }
+
 }

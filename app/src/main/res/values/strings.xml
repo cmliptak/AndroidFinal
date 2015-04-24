@@ -64,6 +64,7 @@
         <string name="class7Info">Class 7 Information; Time, Location, Professor</string>
         <string name="class8Info">Class 8 Information; Time, Location, Professor</string>
 
+    <!--Create user resorces-->
         <string name="user">User</string>
         <string name="pass">Password</string>
         <string name="confirmPass">Confirm</string>
@@ -79,11 +80,30 @@
         <string name="title_activity_forgot">Forgot</string>
         <string name="title_activity_create_user">Create User</string>
 
+    <string-array name="demographic">
+        <item>Select an Ethnicity</item>
+        <item>African-American</item>
+        <item>Asain</item>
+        <item>caucasian</item>
+        <item>Hispanic</item>
+        <item>Native-American</item>
+    </string-array>
+
     <!--book store resorces-->
     <string name="amazon">Search Amazon</string>
     <string name="chegg">Search Chegg</string>
     <string name="barnsAndNoble">Search Barns &amp; Noble</string>
     <string name="search"> search</string>
     <string name="title">Search for a book</string>
+
+    <!--GPA resorces-->
+    <string name="title1">Answer the fallowing: How many credit Hours did you receive</string>
+    <string name="aA"> an A?</string>
+    <string name="aB"> a B?</string>
+    <string name="aC"> a C?</string>
+    <string name="aD"> a D?</string>
+    <string name="aF"> a F?</string>
+    <string name="GPA"> </string>
+    <string name="calc">Calculate</string>
 
 </resources>

@@ -7,13 +7,14 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
 
 /**
  * Created by Christina on 4/19/2015.
  */
-public class UserDatabase extends SQLiteOpenHelper {
+public class UserDatabase extends SQLiteOpenHelper implements Serializable {
 
     private static final int DATABASE_VERSION = 1;
     private static final String DBNAME = "UserAcctDB";
@@ -99,7 +100,11 @@ public class UserDatabase extends SQLiteOpenHelper {
         // 4. close
         db.close();
     }
+    // end add user method
 
+
+
+    //pull user info
         public User getUser(String id){
 
         // 1. get reference to readable DB
@@ -132,7 +137,7 @@ public class UserDatabase extends SQLiteOpenHelper {
         person.setSemester(cursor.getString(5));
         person.setDemog(cursor.getString(6));
 
-        Log.d("getUser("+id+")", person.toString());
+      //  Log.d("getUser("+id+")", person.toString());
 
         // 5. return person
         return person;
