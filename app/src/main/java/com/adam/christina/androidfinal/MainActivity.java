@@ -19,7 +19,7 @@ import java.io.Serializable;
 public class MainActivity extends ActionBarActivity implements Serializable {
 
     private User thisUser;
-    Boolean flag;
+    Boolean flag = true;
 
 
     @Override
